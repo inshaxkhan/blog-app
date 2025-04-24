@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+<h1>COMPOSE</h1> <br/>
+
+<form action="/create" method="post">
+    <label for="title" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">TITLE</label> <br>
+    <input type="text" name="title" placeholder="Blog Title" style="width: 900px;" required> <br/> <br/>
+    <label for="post" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">POST</label> <br>
+    <textarea name="post" required="true" style="width: 900px; height: 200px;" > </textarea> <br/> <br/>
+
+    <button type="submit" style="background-color: rgb(81, 81, 235); color: white; border-radius: 4px; border:0px; padding: 4px 10px;">Publish</button>
+</form>
+
+<%- include('partials/footer') %>

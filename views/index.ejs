@@ -1,0 +1,25 @@
+<%- include('partials/header.ejs') %> 
+
+<h1>HOME</h1>
+<p style="color: rgb(4, 4, 75); padding-bottom: 50px;"> <%= homepg %> </p>
+
+<div style="background-color: rgb(221, 236, 236); padding: 50px;">
+    <h2> CREATE YOUR NEW BLOG</h2>
+    <a href="/create"> <button style="font-size: large ; margin-top: 20px; margin-bottom: 20px; background-color: rgb(62, 207, 62); color:white; border-color: white; border-radius: 6px;"> Create new Blog </button> </a>    
+</div>
+
+<h2 style="padding-top: 50px;"> BLOGS</h2>
+<!-- for loop to print -->
+ <div class="blogs" style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr"> 
+<% for( let i = 0; i < allPosts.length; i++ ) { %>
+    <div style="border-left: 1px solid rgb(219, 214, 214); border-bottom: 1px solid rgb(219, 214, 214); margin: 20px 20px; padding: 5px; justify-content: space-between; ">   
+        <h6 style="color: darkblue;"> <%= allPosts[i].title %> </h6>
+        <p> <%= (allPosts[i].content).substring(0,100) %> ... </p>
+        <a href="/posts/<%= allPosts[i].title %>">Read more</a>
+    </div>
+<% } %>
+</div>
+
+<br/>
+
+<%- include('partials/footer.ejs') %>

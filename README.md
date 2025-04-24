@@ -4,7 +4,7 @@ This project is a simple yet powerful blog application built using Node.js, Expr
 ## What I Learned:
 Through this project, I learned how to integrate a modern stack for building web applications, utilizing the flexibility of Node.js and Express for server-side logic. Working with EJS helped me understand how to create dynamic, reusable templates. Supabase expanded my knowledge of using a serverless, PostgreSQL-based solution for database management and authentication, simplifying backend tasks while maintaining scalability and security.
 
-##Blog app UI
+## Blog app UI
 ![UI of Home Page](./images/home_ss.png)
 
 ![Compose a Blog Page](./images/compose_ss.png)

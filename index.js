@@ -23,8 +23,9 @@ const home="Welcome to my corner of the internet! I’m Insha Khan, a writer and
 
 // Home route - fetch posts from Supabase
 app.get("/", async (req, res) => {
-    const { data: posts, error } = await supabase.from("posts").select("*");
-    if (error) return res.status(500).send("Error fetching posts");
+    const { data: posts, error } = await supabase.from("posts").select("*").order('created_at', {ascending:false});
+    // if (error) return res.status(500).send("Error fetching posts");
+    // const sortedPosts = posts.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
     res.render("index.ejs", { homepg: home, allPosts: posts });
   });
   
